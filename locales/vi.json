@@ -1,0 +1,17 @@
+{
+  "language": "Tiếng Việt",
+  "ui": {
+    "per_hour": "/ giờ",
+    "rent": "Thuê",
+    "choose_color": "Chọn màu sắc:",
+    "rental_dur": "Thời gian thuê:",
+    "rental_dur_placeholder": "Số giờ thuê",
+    "one_hour": "1 tiếng",
+    "two_hours": "2 tiếng",
+    "three_hours": "3 tiếng",
+    "four_hours": "4 tiếng",
+    "total": "Tổng cộng:",
+    "cash": "Tiền mặt",
+    "card": "Thẻ"
+  }
+}
