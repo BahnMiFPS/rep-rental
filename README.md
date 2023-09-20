@@ -16,14 +16,14 @@ Join our community or get support:
 
 ## **👋Introduction**
 
-This is a multi-framework/ standalone vehicle rental script.
+This is a standalone vehicle rental script for FiveM.
 
 Features:
 
-- Rent vehicles at multiple locations.
 - Custom License Plates for Rented Vehicles.
 - A rental paper that can be used to give keys for disconnected players.
-- Simple, lore-friendly UI
+- Multiple locales support.
+- Simple, lore-friendly UI.
 
 ---
 
@@ -36,9 +36,10 @@ pnpm i
 pnpm build
 ```
 
-**Get Started Easily** – Just drag and drop the folder into your project and initiate it in your FiveM server.cfg.
+– Just drag and drop the folder into your project and initiate it in your FiveM server.cfg.
+– Ensure rep-talkNPC **before** rep-rental
 
-**Adding More Vehicles?** – No worries:
+– **Adding More Vehicles?**
 
 1. Place your vehicle photos in the `web/public/assets` folder following the naming convention: _vehicleName_.png then rebuild the UI
 2. Navigate to `config.lua` and append your new vehicles following the existing format.
@@ -46,9 +47,16 @@ pnpm build
 
 ---
 
-## **💻UI Changes**
+## **✅ Todos**:
 
-Making UI changes is a breeze:
+- [ ] ESX support
+- [ ] Adding boats, planes
+- [ ] Timeout notices
+      ...
+
+---
+
+## **💻UI Changes**
 
 1. Head over to the `/web` folder to begin.
 2. Launch the UI in a local web environment with `pnpm start` command.
@@ -81,6 +89,7 @@ Ensure to have the following dependencies set up:
 
 Discover our range of high-quality products optimized for QB/ESX:
 
+- [Unlimited Strain Weed Rep System w/ Cornering, Weed Runs](https://forum.cfx.re/t/esx-qb-ox-90-000-strain-weed-rep-system-w-cornering-weed-runs/4964606)
 - [Group Postal Op Delivery (NoPixel 3.5 Inspired)](https://forum.cfx.re/t/qb-esx-group-postal-op-delivery-nopixel-3-5-dodo-inspired/4894624/29)
 - [Group Sanitation Job v2 (NoPixel Inspired)](https://forum.cfx.re/t/nopixel-inspired-group-sanitation-job-v2/4929184/5)
 - [Oxy Run with Money Laundering (NoPixel Inspired)](https://forum.cfx.re/t/nopixel-inspired-oxy-run-w-money-laundering/4941107/10)
@@ -94,4 +103,4 @@ Discover our range of high-quality products optimized for QB/ESX:
 
 Your trust is our priority. Our project is verified and protected under:
 
-[![DMCA Protection Certificate](https://i.imgur.com/DMh5xiO.png)](https://www.dmca.com/r/deyjek2)
+[![DMCA Protection Certificate](https://i.imgur.com/TPtlTF8.png)](https://www.dmca.com/r/0epekze)
