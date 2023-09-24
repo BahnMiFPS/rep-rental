@@ -77,6 +77,10 @@ RegisterNUICallback('close', function(_, cb)
     currentRental = 0
 end)
 
+RegisterNUICallback('setLocale', function(_, cb)
+    cb(Lang['ui'])
+end)
+
 RegisterNUICallback('rent', function(data, cb)
     local id = currentRental
     if Config.DriverLicense[data.type] then

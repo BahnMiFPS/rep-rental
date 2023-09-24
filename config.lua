@@ -119,6 +119,20 @@ Config.Lang = {
         ['ped_data2'] = {
             msg = "Tôi chỉ đi ngang qua đâ",
         },
+        ['ui'] = {
+            per_hour = "/ giờ",
+            rent = "Thuê",
+            choose_color = "Chọn màu sắc:",
+            rental_dur = "Thời gian thuê:",
+            rental_dur_placeholder = "Số giờ thuê",
+            one_hour = "1 tiếng",
+            two_hours = "2 tiếng",
+            three_hours = "3 tiếng",
+            four_hours = "4 tiếng",
+            total = "Tổng cộng:",
+            cash = "Tiền mặt",
+            card = "Thẻ"
+        }
     },
     ['en'] = {
         ['error_obstacle'] = {
@@ -147,5 +161,20 @@ Config.Lang = {
         ['ped_data2'] = {
             msg = "I'm just passing by here",
         },
+        ['ui'] = {
+            per_hour = "/ per hour",
+            rent = "Rent",
+            choose_color = "Choose a color:",
+            rental_dur = "Rental duration:",
+            rental_dur_placeholder = "Rent hours",
+            one_hour = "1 hour",
+            two_hours = "2 hours",
+            three_hours = "3 hours",
+            four_hours = "4 hours",
+            total = "Total amount:",
+            cash = "Cash",
+            card = "Card"
+        }
+
     }
 }
