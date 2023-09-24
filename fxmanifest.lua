@@ -5,14 +5,14 @@ version '1.0.0'
 
 lua54 'yes'
 
-games {"gta5", "rdr3"}
+games { "gta5", "rdr3" }
 
 ui_page 'web/build/index.html'
 
-client_scripts {'@hotp/build/client/token.lua', "client/**/*"}
+client_scripts { "client/**/*" }
 
-shared_scripts {'@ox_lib/init.lua', 'config.lua', 'imports/locale/shared.lua'}
+shared_scripts { '@ox_lib/init.lua', 'config.lua', 'imports/locale/shared.lua' }
 
 server_script "server/**/*"
 
-files {'web/build/index.html', 'web/build/**/*', 'locales/*.json'}
+files { 'web/build/index.html', 'web/build/**/*', 'locales/*.json' }
