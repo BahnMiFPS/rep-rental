@@ -1,0 +1,61 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  create-release:
+    name: Build and Create Tagged Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install archive tools
+        run: sudo apt install zip
+
+      - name: Checkout source code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}
+
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+
+      - name: Install PNPM
+        run: npm install -g pnpm
+
+      - name: Install dependencies and run build
+        run: |
+          cd web
+          pnpm install
+          pnpm build
+
+      - name: Bundle files
+        run: |
+          mkdir -p ./temp/rep-rental
+          mkdir -p ./temp/rep-rental/client
+          mkdir -p ./temp/rep-rental/web
+          cp ./{config.lua,fxmanifest.lua,LICENSE,README.md} ./temp/rep-rental
+          cp -r ./client ./temp/rep-rental
+          cp -r ./web/build ./temp/rep-rental/web
+          cd ./temp && zip -r ../rep-rental.zip ./rep-rental
+
+      - name: Create Release
+        uses: "marvinpinto/action-automatic-releases@v1.2.1"
+        id: auto_release
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          title: ${{ env.RELEASE_VERSION }}
+          prerelease: false
+          files: rep-rental.zip
+
+        env:
+          CI: false
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
