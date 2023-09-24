@@ -1,5 +1,5 @@
 Config = {}
-local Core = exports['rep-core']:GetCoreObject()
+local Core = exports['qb-core']:GetCoreObject()
 Config.DriverLicense = {
     ['car'] = 'driver_car',
     ['plane'] = 'driver_plane',

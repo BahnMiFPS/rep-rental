@@ -5,16 +5,14 @@
 - [Preview Video](https://youtu.be/H5MnafXwj6A)
 - [Source Code on GitHub](https://github.com/BahnMiFPS/rep-rental)
 
-Join our community or get support:
+## Join our community for more free stuffs:
 
 - [Discord](https://discord.gg/VxGs8ceG5W)
 - [Tebex](https://rep.tebex.io/)
 - [YouTube](https://www.youtube.com/@repscripts)
 - [CFX Forum](https://forum.cfx.re/u/bahnmifps/activity/topics)
 
----
-
-## **👋Introduction**
+## 👋 Introduction
 
 This is a standalone vehicle rental script for FiveM.
 
@@ -25,9 +23,7 @@ Features:
 - Multiple locales support.
 - Simple, lore-friendly UI.
 
----
-
-## **📚Installation**
+## 📚 Installation
 
 Download a release [HERE](https://github.com/BahnMiFPS/rep-rental/releases) or build the source code.
 
@@ -39,55 +35,35 @@ pnpm build
 ```
 
 – Just drag and drop the folder into your project and initiate it in your FiveM server.cfg.
-– Ensure rep-talkNPC **before** rep-rental
+– Ensure rep-talkNPC before rep-rental
 
-– **Adding More Vehicles?**
+– Adding More Vehicles?
 
 1. Place your vehicle photos in the `web/public/assets` folder following the naming convention: _vehicleName_.png then rebuild the UI
 2. Navigate to `config.lua` and append your new vehicles following the existing format.
 3. Please share it back with us, we'd love to complete this resource with you for everyone to enjoy! 💖
 
----
-
-## **✅ Todos**:
+## ✅ Todos:
 
 - [ ] ESX support
 - [ ] Adding boats, planes
 - [ ] Timeout notices
       ...
 
----
-
-## **💻UI Changes**
+## 💻 UI Changes
 
 1. Head over to the `/web` folder to begin.
 2. Launch the UI in a local web environment with `pnpm start` command.
 3. After modifying, apply the changes using `pnpm build`, followed by an in-game script restart to visualize the updates. (You will need to do this step again for any UI changes.)
 
----
-
-## **⚙️Dependencies**
+## ⚙️ Dependencies
 
 Ensure to have the following dependencies set up:
 
 - [rep-talkNPC v2](https://github.com/BahnMiFPS/rep-talkNPC)
 - [QBCore Framework](https://github.com/qbcore-framework) or [ESX](https://github.com/esx-framework)
 
----
-
-## 🛠️ **Updates**
-
-### **1.0**
-
-- Initial release
-
-### **1.1**
-
-- Stay tuned for exciting updates!
-
----
-
-## **Featured Products** :star2:
+## Featured Products :star2:
 
 Discover our range of high-quality products optimized for QB/ESX:
 
@@ -99,9 +75,7 @@ Discover our range of high-quality products optimized for QB/ESX:
 - [Advanced Realistic Trunk Space](https://forum.cfx.re/t/paid-qbcore-advanced-realistic-trunk-space/4891965/2)
 - [Realistic Vehiclekey with Hacking Device](https://forum.cfx.re/t/release-paid-qbcore-realistic-vehiclekey-with-hacking-device/4891955/10)
 
----
-
-## **Certifications**
+## Certifications
 
 Your trust is our priority. Our project is verified and protected under:
 

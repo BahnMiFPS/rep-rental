@@ -1,4 +1,4 @@
-local Core = exports["rep-core"]:GetCoreObject()
+local Core = exports["qb-core"]:GetCoreObject()
 local blips = {}
 local currentRental = 0
 local _lang = GetConvar('repscripts:locale', 'en')
@@ -21,7 +21,8 @@ local function spawnVeh(_data, _id)
             local r1, g1, b1 = _data.color:match("rgb%((%d+), (%d+), (%d+)%)")
             SetVehicleCustomPrimaryColour(car, tonumber(r1), tonumber(g1), tonumber(b1))
             TriggerEvent("vehiclekeys:client:SetOwner", Core.Functions.GetPlate(car))
-            TriggerServerEvent("rep-rental:server:giveRentalPaper", Core.Functions.GetPlate(car), Core.Shared.Vehicles[_data.model].brand.." "..Core.Shared.Vehicles[_data.model].name)
+            TriggerServerEvent("rep-rental:server:giveRentalPaper", Core.Functions.GetPlate(car),
+                Core.Shared.Vehicles[_data.model].brand .. " " .. Core.Shared.Vehicles[_data.model].name)
         end
     end, _data)
 end
@@ -58,7 +59,7 @@ CreateThread(function()
                         data = {
                             vehicles = info.vehicles
                         }
-                    })  
+                    })
                 end
             },
             [2] = {
@@ -83,7 +84,8 @@ RegisterNUICallback('rent', function(data, cb)
             if hasLicense then
                 spawnVeh(data, id)
             else
-                Core.Functions.Notify(Lang['error_license'].msg, Lang['error_license'].type, Lang['error_license'].time)
+                Core.Functions.Notify(Lang['error_license'].msg, Lang['error_license'].type, Lang['error_license']
+                    .time)
             end
         end, Config.DriverLicense[data.type])
     else
@@ -97,7 +99,8 @@ RegisterNUICallback('init', function(_, cb)
         action = 'loadLocales',
         data = {}
     })
-    local JSON = LoadResourceFile(cache.resource, ('locales/%s.json'):format(GetConvar('repscripts:locale', 'en'))) or LoadResourceFile(cache.resource, 'locales/en.json')
+    local JSON = LoadResourceFile(cache.resource, ('locales/%s.json'):format(GetConvar('repscripts:locale', 'en'))) or
+        LoadResourceFile(cache.resource, 'locales/en.json')
     SendNUIMessage({
         action = 'setLocale',
         data = JSON and json.decode(JSON) or {}

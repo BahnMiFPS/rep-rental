@@ -1,4 +1,4 @@
-local Core = exports['rep-core']:GetCoreObject()
+local Core = exports['qb-core']:GetCoreObject()
 local _lang = GetConvar('repscripts:locale', 'en')
 local Lang = Config.Lang[_lang]
 local vehs = {}
@@ -18,7 +18,7 @@ RegisterServerEvent('rep-rental:server:giveRentalPaper', function(plate, model)
     info.lastname = Player.PlayerData.charinfo.lastname
     info.plate = plate
     info.model = model
-    TriggerClientEvent('inventory:client:ItemBox', src,  Core.Shared.Items["rentalpapers"], 'add')
+    TriggerClientEvent('inventory:client:ItemBox', src, Core.Shared.Items["rentalpapers"], 'add')
     Player.Functions.AddItem('rentalpapers', 1, false, info)
 end)
 
@@ -28,14 +28,16 @@ Core.Functions.CreateCallback('rep-rental:callback:spawnVeh', function(source, c
     local ped = GetPlayerPed(src)
     if _data.payment == 'cash' then
         if Player.PlayerData.money.cash < _data.total then
-            TriggerClientEvent('Core:Notify', src, Lang['error_cash'].msg, Lang['error_cash'].type, Lang['error_cash'].time)
+            TriggerClientEvent('Core:Notify', src, Lang['error_cash'].msg, Lang['error_cash'].type,
+                Lang['error_cash'].time)
             cb(false)
             return
         end
         Player.Functions.RemoveMoney('cash', _data.total)
     else
         if Player.PlayerData.money.bank < _data.total then
-            TriggerClientEvent('Core:Notify', src, Lang['error_bank'].msg, Lang['error_bank'].type, Lang['error_bank'].time)
+            TriggerClientEvent('Core:Notify', src, Lang['error_bank'].msg, Lang['error_bank'].type,
+                Lang['error_bank'].time)
             cb(false)
             return
         end
@@ -49,14 +51,14 @@ Core.Functions.CreateCallback('rep-rental:callback:spawnVeh', function(source, c
         TaskWarpPedIntoVehicle(ped, veh, -1)
     end
     while NetworkGetEntityOwner(veh) ~= src do Wait(0) end
-    vehs[#vehs+1] = {
+    vehs[#vehs + 1] = {
         entity = veh,
-        time = os.time() +(_data.time * 60 * 60)
+        time = os.time() + (_data.time * 60 * 60)
     }
     cb(NetworkGetNetworkIdFromEntity(veh))
 end)
 
-CreateThread(function ()
+CreateThread(function()
     while true do
         for k, v in pairs(vehs) do
             if v then
