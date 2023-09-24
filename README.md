@@ -1,4 +1,4 @@
-# ![rep-rental](https://i.imgur.com/2zcKqk5.png)
+# ![rep-rental](https://i.imgur.com/3FCYSNL.png)
 
 ### :star: Enjoyed our free projects? Star it to show support and help others discover it! ❤️
 
@@ -28,6 +28,8 @@ Features:
 ---
 
 ## **📚Installation**
+
+Download a release [HERE](https://github.com/BahnMiFPS/rep-rental/releases) or build the source code.
 
 ```
 git clone https://github.com/BahnMiFPS/rep-rental.git

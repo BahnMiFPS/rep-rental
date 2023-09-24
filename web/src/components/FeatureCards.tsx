@@ -77,7 +77,8 @@ export function FeaturesCard({ car }: FeatureCardsProps) {
     return () => {
       window.removeEventListener("keydown", handleEscKeyPressed)
     }
-  }, [visible])
+  }, [visible, opened, closeUi]) // Include 'opened' and 'closeUi' in the dependency array
+
   return (
     <>
       <Card withBorder radius="sm" className={classes.card}>
