@@ -99,7 +99,7 @@ function RentalModal({ car }: Props) {
             { value: "4", label: `${locale.ui.four_hours}` },
           ]}
           onChange={setHoursRent}
-          styles={(theme) => ({
+          styles={() => ({
             item: {
               "&[data-selected]": {
                 "&, &:hover": {

@@ -26,7 +26,7 @@ const App: React.FC = () => {
               scrollbarSize={"6"}
               offsetScrollbars={true}
               style={{ color: "red" }}
-              styles={(theme) => ({
+              styles={() => ({
                 scrollbar: {
                   '&[data-orientation="vertical"] .mantine-ScrollArea-thumb': {
                     backgroundColor: "rgb(250, 204, 51)",

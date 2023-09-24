@@ -19,7 +19,7 @@ Config.Locations = {
         type = 'vehicle',
         blip = {
             label = "Rental",
-            colour= 50,
+            colour = 50,
             sprite = 56,
         },
         vehicles = {
@@ -27,71 +27,71 @@ Config.Locations = {
                 model = 'bmx',
                 money = 50,
                 img = 'nui://rep-rental/web/build/assets/bmx.png',
-                label = Core.Shared.Vehicles['bmx']['brand']..' '..Core.Shared.Vehicles['bmx']['name'],
+                label = Core.Shared.Vehicles['bmx']['brand'] .. ' ' .. Core.Shared.Vehicles['bmx']['name'],
             },
             {
                 model = 'cruiser',
                 money = 50,
                 img = 'nui://rep-rental/web/build/assets/cruiser.png',
-                label = Core.Shared.Vehicles['cruiser']['brand']..' '..Core.Shared.Vehicles['cruiser']['name'],
+                label = Core.Shared.Vehicles['cruiser']['brand'] .. ' ' .. Core.Shared.Vehicles['cruiser']['name'],
             },
             {
                 model = 'scorcher',
                 money = 75,
                 img = 'nui://rep-rental/web/build/assets/scorcher.png',
-                label = Core.Shared.Vehicles['scorcher']['brand']..' '..Core.Shared.Vehicles['scorcher']['name'],
+                label = Core.Shared.Vehicles['scorcher']['brand'] .. ' ' .. Core.Shared.Vehicles['scorcher']['name'],
             },
             {
                 model = 'faggio',
                 money = 150,
                 img = 'nui://rep-rental/web/build/assets/faggio.png',
-                label = Core.Shared.Vehicles['faggio']['brand']..' '..Core.Shared.Vehicles['faggio']['name'],
+                label = Core.Shared.Vehicles['faggio']['brand'] .. ' ' .. Core.Shared.Vehicles['faggio']['name'],
             },
             {
                 model = 'faggio2',
                 money = 150,
                 img = 'nui://rep-rental/web/build/assets/faggio2.png',
-                label = Core.Shared.Vehicles['faggio2']['brand']..' '..Core.Shared.Vehicles['faggio2']['name'],
+                label = Core.Shared.Vehicles['faggio2']['brand'] .. ' ' .. Core.Shared.Vehicles['faggio2']['name'],
             },
             {
                 model = 'faggio3',
                 money = 175,
                 img = 'nui://rep-rental/web/build/assets/faggio3.png',
-                label = Core.Shared.Vehicles['faggio3']['brand']..' '..Core.Shared.Vehicles['faggio3']['name'],
+                label = Core.Shared.Vehicles['faggio3']['brand'] .. ' ' .. Core.Shared.Vehicles['faggio3']['name'],
             },
             {
                 model = 'panto',
                 money = 300,
                 type = 'car',
                 img = 'nui://rep-rental/web/build/assets/panto.png',
-                label = Core.Shared.Vehicles['panto']['brand']..' '..Core.Shared.Vehicles['panto']['name'],
+                label = Core.Shared.Vehicles['panto']['brand'] .. ' ' .. Core.Shared.Vehicles['panto']['name'],
             },
             {
                 model = 'asea',
                 money = 500,
                 type = 'car',
                 img = 'nui://rep-rental/web/build/assets/asea.png',
-                label = Core.Shared.Vehicles['asea']['brand']..' '..Core.Shared.Vehicles['asea']['name'],
+                label = Core.Shared.Vehicles['asea']['brand'] .. ' ' .. Core.Shared.Vehicles['asea']['name'],
             },
             {
                 model = 'primo',
                 money = 600,
                 type = 'car',
                 img = 'nui://rep-rental/web/build/assets/primo.png',
-                label = Core.Shared.Vehicles['primo']['brand']..' '..Core.Shared.Vehicles['primo']['name'],
+                label = Core.Shared.Vehicles['primo']['brand'] .. ' ' .. Core.Shared.Vehicles['primo']['name'],
             },
             {
                 model = 'felon',
                 money = 600,
                 type = 'car',
                 img = 'nui://rep-rental/web/build/assets/felon.png',
-                label = Core.Shared.Vehicles['felon']['brand']..' '..Core.Shared.Vehicles['felon']['name'],
+                label = Core.Shared.Vehicles['felon']['brand'] .. ' ' .. Core.Shared.Vehicles['felon']['name'],
             },
         }
     },
 }
 
-Config.Lang ={
+Config.Lang = {
     ['vi'] = {
         ['error_obstacle'] = {
             msg = "Có phương tiện đang chắn đường",

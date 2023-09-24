@@ -3,5 +3,5 @@ export interface Car {
   type?: string
   label: string
   money: number
-  img: string
+  img?: string
 }

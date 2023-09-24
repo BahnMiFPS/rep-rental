@@ -29,7 +29,6 @@ const useStyles = createStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     gap: theme.spacing.sm,
-    alignItems: "center",
   },
 
   label: {
@@ -64,7 +63,7 @@ interface FeatureCardsProps {
 export function FeaturesCard({ car }: FeatureCardsProps) {
   const { locale } = useLocales()
   const { classes } = useStyles()
-  const { label, money, img } = car
+  const { label, money, img, model } = car
   const [opened, { open, close }] = useDisclosure(false)
   const { visible, closeUi } = useShopData()
 
@@ -83,7 +82,12 @@ export function FeaturesCard({ car }: FeatureCardsProps) {
     <>
       <Card withBorder radius="sm" className={classes.card}>
         <Card.Section className={classes.imageSection}>
-          <Image src={img} alt={label} />
+          <Image
+            src={img ? img : `https://docs.fivem.net/vehicles/${model}.webp`}
+            alt={model}
+            width={"100%"}
+            height={"auto"}
+          />
         </Card.Section>
 
         <Card.Section className={classes.section}>

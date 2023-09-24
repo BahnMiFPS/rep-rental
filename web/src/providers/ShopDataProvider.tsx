@@ -14,7 +14,7 @@ import { Car } from "../typings/Car"
 import { debugData } from "../utils/debugData"
 
 const mockCars: Car[] = [
-  { model: "1", label: "Declasse Asea", money: 50, img: `./assets/bmx.png` },
+  { model: "asea", label: "Declasse Asea", money: 50 },
   {
     model: "1",
     label: "Declasse Asea",
