@@ -42,8 +42,12 @@ jobs:
           mkdir -p ./temp/rep-rental
           mkdir -p ./temp/rep-rental/client
           mkdir -p ./temp/rep-rental/web
+          mkdir -p ./temp/rep-rental/server
+          mkdir -p ./temp/rep-rental/locales
           cp ./{config.lua,fxmanifest.lua,LICENSE,README.md} ./temp/rep-rental
           cp -r ./client ./temp/rep-rental
+          cp -r ./locales ./temp/rep-rental
+          cp -r ./server ./temp/rep-rental
           cp -r ./web/build ./temp/rep-rental/web
           cd ./temp && zip -r ../rep-rental.zip ./rep-rental
 
