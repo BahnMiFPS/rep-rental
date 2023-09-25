@@ -2,6 +2,7 @@ local Core = exports['qb-core']:GetCoreObject()
 local _lang = GetConvar('repscripts:locale', 'en')
 local Lang = Config.Lang[_lang]
 local vehs = {}
+
 Core.Functions.CreateCallback('rep-rental:callback:checkLicense', function(source, cb, type)
     local src = source
     local Player = Core.Functions.GetPlayer(src)
@@ -28,7 +29,7 @@ Core.Functions.CreateCallback('rep-rental:callback:spawnVeh', function(source, c
     local ped = GetPlayerPed(src)
     if _data.payment == 'cash' then
         if Player.PlayerData.money.cash < _data.total then
-            TriggerClientEvent('Core:Notify', src, Lang['error_cash'].msg, Lang['error_cash'].type,
+            TriggerClientEvent('QBCore:Notify', src, Lang['error_cash'].msg, Lang['error_cash'].type,
                 Lang['error_cash'].time)
             cb(false)
             return
@@ -36,7 +37,7 @@ Core.Functions.CreateCallback('rep-rental:callback:spawnVeh', function(source, c
         Player.Functions.RemoveMoney('cash', _data.total)
     else
         if Player.PlayerData.money.bank < _data.total then
-            TriggerClientEvent('Core:Notify', src, Lang['error_bank'].msg, Lang['error_bank'].type,
+            TriggerClientEvent('QBCore:Notify', src, Lang['error_bank'].msg, Lang['error_bank'].type,
                 Lang['error_bank'].time)
             cb(false)
             return

@@ -4,6 +4,7 @@ local currentRental = 0
 local _lang = GetConvar('repscripts:locale', 'en')
 local Lang = Config.Lang[_lang]
 local npc = nil
+
 local function spawnVeh(_data, _id)
     _data.coords = Config.Locations[_id].spawnpoint
     if IsAnyVehicleNearPoint(_data.coords.x, _data.coords.y, _data.coords.z, 2.0) then
