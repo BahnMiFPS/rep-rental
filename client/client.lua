@@ -41,7 +41,7 @@ CreateThread(function()
         EndTextCommandSetBlipName(blips[_])
         npc = exports['rep-talkNPC']:CreateNPC({
             npc = info.ped.hash,
-            coords = vector3(info.coords.x, info.coords.y, info.coords.z),
+            coords = vector4(info.coords.x, info.coords.y, info.coords.z, info.coords.w),
             heading = info.coords.w,
             name = info.ped.name,
             animScenario = 'WORLD_HUMAN_CLIPBOARD',

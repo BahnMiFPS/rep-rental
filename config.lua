@@ -1,8 +1,7 @@
 Config = {}
 local Core = exports['qb-core']:GetCoreObject()
 Config.DriverLicense = {
-    ['car'] = 'driver_car',
-    ['plane'] = 'driver_plane',
+    ['car'] = 'driver', -- car is the vehicle type, while driver is the player metadata
 }
 
 Config.Locations = {
