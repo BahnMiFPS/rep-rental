@@ -126,7 +126,10 @@ Config.Lang = {
             msg = "Tôi cần một phương tiện",
         },
         ['ped_data2'] = {
-            msg = "Tôi chỉ đi ngang qua đâ",
+            msg = "Tôi chỉ đi ngang qua đây",
+        },
+        ['ped_data3'] = {
+            msg = "Tôi muốn trả xe",
         },
         ['ui'] = {
             per_hour = "/ giờ",
@@ -179,6 +182,9 @@ Config.Lang = {
         },
         ['ped_data2'] = {
             msg = "I'm just passing by here",
+        },
+        ['ped_data3'] = {
+            msg = "Tôi muốn trả xe",
         },
         ['ui'] = {
             per_hour = "/ per hour",
