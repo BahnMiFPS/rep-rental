@@ -102,6 +102,16 @@ Config.Lang = {
             type = "error",
             time = 5000
         },
+        ['error_already'] = {
+            msg = "Hãy trả xe trước khi thuê tiếp",
+            type = "error",
+            time = 5000
+        },
+        ['error_ped'] = {
+            msg = "Có người trong xe",
+            type = "error",
+            time = 5000
+        },
         ['error_cash'] = {
             msg = "Bạn không đủ tiền mặt",
             type = "error",
@@ -139,8 +149,18 @@ Config.Lang = {
             type = "error",
             time = 5000
         },
+        ['error_already'] = {
+            msg = "Hãy trả xe trước khi thuê tiếp",
+            type = "error",
+            time = 5000
+        },
         ['error_license'] = {
             msg = "You need a driver license",
+            type = "error",
+            time = 5000
+        },
+        ['error_ped'] = {
+            msg = "Có người trong xe",
             type = "error",
             time = 5000
         },

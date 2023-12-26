@@ -27,6 +27,13 @@ Core.Functions.CreateCallback('rep-rental:callback:spawnVeh', function(source, c
     local src = source
     local Player = Core.Functions.GetPlayer(src)
     local ped = GetPlayerPed(src)
+    for k, v in pairs(vehs) do
+        if v.owner == Player.PlayerData.citizenid then
+            TriggerClientEvent('QBCore:Notify', src, Lang['error_already'].msg, Lang['error_already'].type,Lang['error_already'].time)
+            cb(false)
+            return
+        end
+    end
     if _data.payment == 'cash' then
         if Player.PlayerData.money.cash < _data.total then
             TriggerClientEvent('QBCore:Notify', src, Lang['error_cash'].msg, Lang['error_cash'].type,
@@ -53,10 +60,34 @@ Core.Functions.CreateCallback('rep-rental:callback:spawnVeh', function(source, c
     end
     while NetworkGetEntityOwner(veh) ~= src do Wait(0) end
     vehs[#vehs + 1] = {
+        owner = Player.PlayerData.citizenid,
         entity = veh,
-        time = os.time() + (_data.time * 60 * 60)
+        time = os.time() + (_data.time * 60 * 60),
+        price = tonumber(_data.total / _data.time),
     }
     cb(NetworkGetNetworkIdFromEntity(veh))
+end)
+
+RegisterNetEvent('rep-rental:server:returnVehicle', function ()
+    local src = source
+    local Player = Core.Functions.GetPlayer(src)
+    for k, v in pairs(vehs) do
+        if v.owner == Player.PlayerData.citizenid then
+            for i = -1, 6, 1 do
+                local ped = GetPedInVehicleSeat(v.entity, i)
+                if ped ~= 0 then
+                    TriggerClientEvent('QBCore:Notify', src, Lang['error_ped'].msg, Lang['error_ped'].type, Lang['error_ped'].time)
+                    return
+                end
+            end
+            local remainTime = math.floor(v.time - os.time())
+            if DoesEntityExist(v.entity) then
+                DeleteEntity(v.entity)
+                Player.Functions.AddMoney('bank', remainTime * v.price)
+            end
+            vehs[k] = nil
+        end
+    end
 end)
 
 CreateThread(function()

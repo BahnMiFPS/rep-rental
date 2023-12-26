@@ -64,6 +64,13 @@ CreateThread(function()
                 end
             },
             [2] = {
+                label = Lang['ped_data3'].msg,
+                shouldClose = true,
+                action = function()
+                    TriggerServerEvent('rep-rental:server:returnVehicle')
+                end
+            },
+            [3] = {
                 label = Lang['ped_data2'].msg,
                 shouldClose = true,
                 action = function()
