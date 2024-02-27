@@ -83,7 +83,7 @@ RegisterNetEvent('rep-rental:server:returnVehicle', function ()
             local remainTime = math.floor(v.time - os.time())
             if DoesEntityExist(v.entity) then
                 DeleteEntity(v.entity)
-                Player.Functions.AddMoney('bank', remainTime * v.price)
+                Player.Functions.AddMoney('bank', (remainTime * v.price / 60 / 60))
             end
             vehs[k] = nil
         end
