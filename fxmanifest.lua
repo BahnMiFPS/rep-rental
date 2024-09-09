@@ -1,7 +1,7 @@
 fx_version "cerulean"
 description "Rep Rental"
 author "Q4D + BahnMiFPS"
-version '1.1.0'
+version '2.0.0'
 
 lua54 'yes'
 
@@ -11,7 +11,7 @@ ui_page 'web/build/index.html'
 
 client_scripts { "client/**/*" }
 
-shared_scripts { '@ox_lib/init.lua', 'config.lua', 'imports/locale/shared.lua' }
+shared_scripts { '@ox_lib/init.lua', 'config.lua'}
 
 server_script "server/**/*"
 

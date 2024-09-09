@@ -44,9 +44,6 @@ pnpm build
 3. Please share it back with us, we'd love to complete this resource with you for everyone to enjoy! 💖
 
 ## ✅ Todos:
-
-- [ ] ESX support
-- [ ] Adding boats, planes
 - [ ] Timeout notices
       ...
 
