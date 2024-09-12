@@ -13,11 +13,17 @@ end
 
 function Framework.getMoney(src, _type)
     local Player = QBCore.Functions.GetPlayer(src)
+    if _type == 'card' then
+        _type = 'bank'
+    end
     return Player.PlayerData.money[_type]
 end
 
 function Framework.removeMoney(src, _type, amount)
     local Player = QBCore.Functions.GetPlayer(src)
+    if _type == 'card' then
+        _type = 'bank'
+    end
     Player.Functions.RemoveMoney(_type, amount, 'rent vehicle')
 end
 

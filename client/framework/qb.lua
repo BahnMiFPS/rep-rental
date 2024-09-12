@@ -10,7 +10,7 @@ function Framework.openMenu(_index)
             _data[_i].label = ('%s %s'):format(QBCore.Shared.Vehicles[_data[_i].model]['brand'], QBCore.Shared.Vehicles[_data[_i].model]['name'])
         end
     end
-    currentRental = __index
+    currentRental = _index
     SetNuiFocus(true, true)
     SendNUIMessage({
         action = 'open',

@@ -10,7 +10,7 @@ function Framework.openMenu(_index)
             _data[_i].label = GetDisplayNameFromVehicleModel(joaat(_data[_i].model)) ~= 'CARNOTFOUND' and GetDisplayNameFromVehicleModel(joaat(_data[_i].model)) or ('%s %s'):format("VEHICLES", _i)
         end
     end
-    currentRental = __index
+    currentRental = _index
     SetNuiFocus(true, true)
     SendNUIMessage({
         action = 'open',

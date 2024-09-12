@@ -9,8 +9,11 @@ local function spawnVeh(_data, _id)
         return
     end
     local netID = lib.callback.await("rep-rental:callback:spawnVeh", false, _data)
+    while not NetworkDoesNetworkIdExist(netID) do
+        Wait(100)
+    end
     local car = NetToVeh(netID)
-    local vehPlate = 'RENT' .. lib.string.random(1, 4)
+    local vehPlate = 'RENT'..lib.string.random('.')..lib.string.random('.')..lib.string.random('.')..lib.string.random('.')
     SetVehicleNumberPlateText(car, vehPlate)
     SetVehicleEngineOn(car, true, true)
     SetVehicleDirtLevel(car, 0.0)
@@ -18,8 +21,9 @@ local function spawnVeh(_data, _id)
     exports['cdn-fuel']:SetFuel(car, 100)
     local r1, g1, b1 = _data.color:match("rgb%((%d+), (%d+), (%d+)%)")
     SetVehicleCustomPrimaryColour(car, tonumber(r1), tonumber(g1), tonumber(b1))
-    TriggerEvent("vehiclekeys:client:SetOwner", vehPlate)
-    TriggerServerEvent("rep-rental:server:giveRentalPaper", vehPlate, Framework.getVehName(_data.model))
+    TriggerEvent("vehiclekeys:client:SetOwner", lib.getVehicleProperties(car).plate)
+    SetPedIntoVehicle(cache.ped, car, -1)
+    TriggerServerEvent("rep-rental:server:giveRentalPaper", lib.getVehicleProperties(car).plate, Framework.getVehName(_data.model))(_data.model)
 end
 
 local function openMenu(_index)

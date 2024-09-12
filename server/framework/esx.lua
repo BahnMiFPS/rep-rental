@@ -15,6 +15,8 @@ end
 function Framework.getMoney(src, _type)
     if _type == 'cash' then
         _type = 'money'
+    elseif _type == 'card' then
+        _type = 'bank'
     end
     local xPlayer = ESX.GetPlayerFromId(src)
     return xPlayer.GetMoney(_type)
@@ -23,6 +25,8 @@ end
 function Framework.removeMoney(src, _type, amount)
     if _type == 'cash' then
         _type = 'money'
+    elseif _type == 'card' then
+        _type = 'bank'
     end
     local xPlayer = ESX.GetPlayerFromId(src)
     xPlayer.removeAccountMoney(_type, amount, 'rent vehicle')

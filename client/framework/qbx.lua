@@ -9,7 +9,7 @@ function Framework.openMenu(_index)
             _data[_i].label = ('%s %s'):format(VEHICLES[_data[_i].model].brand, VEHICLES[_data[_i].model].name)
         end
     end
-    currentRental = __index
+    currentRental = _index
     SetNuiFocus(true, true)
     SendNUIMessage({
         action = 'open',

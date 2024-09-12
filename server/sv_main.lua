@@ -21,10 +21,6 @@ lib.callback.register('rep-rental:callback:spawnVeh', function(source, _data)
     _data.model = type(_data.model) == 'string' and joaat(_data.model) or _data.model
     local veh = CreateVehicle(_data.model, _data.coords.x, _data.coords.y, _data.coords.z, _data.coords.w, true, true)
     while not DoesEntityExist(veh) do Wait(0) end
-    while GetVehiclePedIsIn(ped) ~= veh do
-        Wait(0)
-        TaskWarpPedIntoVehicle(ped, veh, -1)
-    end
     while NetworkGetEntityOwner(veh) ~= src do Wait(0) end
     vehs[#vehs + 1] = {
         owner = Framework.getIdentifier(src),
