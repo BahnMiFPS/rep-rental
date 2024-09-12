@@ -53,21 +53,21 @@ CreateThread(function()
                 startMSG = info.ped.startMSG
             }, {
                 [1] = {
-                    label = Lang['ped_data1'].msg,
+                    label = Lang.npc.button1.label,
                     shouldClose = true,
                     action = function()
                         Framework.openMenu(_)
                     end
                 },
                 [2] = {
-                    label = Lang['ped_data3'].msg,
+                    label = Lang.npc.button2.label,
                     shouldClose = true,
                     action = function()
                         TriggerServerEvent('rep-rental:server:returnVehicle')
                     end
                 },
                 [3] = {
-                    label = Lang['ped_data2'].msg,
+                    label = Lang.npc.button3.label,
                     shouldClose = true,
                     action = function()
                     end
