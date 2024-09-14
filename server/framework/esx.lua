@@ -19,7 +19,7 @@ function Framework.getMoney(src, _type)
         _type = 'bank'
     end
     local xPlayer = ESX.GetPlayerFromId(src)
-    return xPlayer.GetMoney(_type)
+    return xPlayer.getAccount(_type).money
 end
 
 function Framework.removeMoney(src, _type, amount)
