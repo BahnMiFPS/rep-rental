@@ -77,6 +77,34 @@ Config.Locations = {
             },
         }
     },
+    {
+        ped = {
+            hash = 'u_f_m_miranda_02',
+            name = 'Carmella Rentheart',
+            position = "Escalera Employee",
+            color = "#FDE047",
+            startMSG = 'Hey, how may I help you today?',
+        },
+        coords = vector4(-1799.38, -1224.21, 0.6, 152.33),
+        spawnpoint = vector4(-1793.61, -1264.12, 0.85, 155.99),
+        blip = {
+            label = "Rental",
+            colour = 50,
+            sprite = 56,
+        },
+        vehicles = {
+            {
+                model = 'seashark',
+                money = 500,
+                img = 'nui://rep-rental/web/build/assets/seashark.png',
+            },
+            {
+                model = 'jetmax',
+                money = 2000,
+                img = 'nui://rep-rental/web/build/assets/jetmax.png',
+            },
+        }
+    },
 }
 
 Config.Lang = {
