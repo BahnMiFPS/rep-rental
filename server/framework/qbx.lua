@@ -11,11 +11,17 @@ end
 
 function Framework.getMoney(src, _type)
     local player = exports.qbx_core:GetPlayer(src)
+    if _type == 'card' then
+        _type = 'bank'
+    end
     return player.Functions.GetMoney(_type)
 end
 
 function Framework.removeMoney(src, _type, amount)
     local player = exports.qbx_core:GetPlayer(src)
+    if _type == 'card' then
+        _type = 'bank'
+    end
     player.Functions.RemoveMoney(_type, amount, 'rent vehicle')
 end
 
