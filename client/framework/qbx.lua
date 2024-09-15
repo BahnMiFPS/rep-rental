@@ -19,6 +19,10 @@ function Framework.openMenu(_index)
     })
 end
 
+function Framework.Notification(_msg, _type, _time)
+    exports.qbx_core:Notify(_msg, _type, _time)
+end
+
 function Framework.getVehName(_model)
     return ('%s %s'):format(VEHICLES[_model].brand, VEHICLES[_model].name)
 end

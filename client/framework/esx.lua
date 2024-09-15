@@ -20,6 +20,10 @@ function Framework.openMenu(_index)
     })
 end
 
+function Framework.Notification(_msg, _type, _time)
+    ESX.ShowNotification(_msg, _type, _time)
+end
+
 function Framework.getVehName(_model)
     return GetDisplayNameFromVehicleModel(joaat(_model)) ~= 'CARNOTFOUND' and GetDisplayNameFromVehicleModel(joaat(_model)) or "VEHICLE"
 end

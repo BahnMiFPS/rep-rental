@@ -20,6 +20,10 @@ function Framework.openMenu(_index)
     })
 end
 
+function Framework.Notification(_msg, _type, _time)
+    QBCore.Functions.Notify(_msg, _type, _time)
+end
+
 function Framework.getVehName(_model)
     return ('%s %s'):format(QBCore.Shared.Vehicles[_model]['brand'], QBCore.Shared.Vehicles[_model]['name'])
 end
